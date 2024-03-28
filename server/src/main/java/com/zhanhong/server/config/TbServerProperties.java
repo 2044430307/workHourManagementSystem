@@ -12,4 +12,8 @@ public class TbServerProperties {
     private String startUrl;
 
     private String endUrl;
+
+    private String username;
+
+    private String password;
 }

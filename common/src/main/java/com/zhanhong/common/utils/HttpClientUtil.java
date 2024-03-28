@@ -35,7 +35,7 @@ public class HttpClientUtil {
      * @param paramMap
      * @return
      */
-    public static String doGet(String url, Map<String,String> paramMap, HttpServletRequest request){
+    public static String doGet(String url, Map<String,String> paramMap, String token){
         // 创建Httpclient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
 
@@ -54,7 +54,7 @@ public class HttpClientUtil {
             //创建GET请求
             HttpGet httpGet = new HttpGet(uri);
 
-            httpGet.addHeader("X-Authorization",request.getHeader("X-Authorization").toString());
+            httpGet.addHeader("X-Authorization",token);
 
             //发送请求
             response = httpClient.execute(httpGet);
