@@ -32,7 +32,6 @@ public class RenewWorkingHoursTask {
     private Logger logger=Logger.getLogger(RenewWorkingHoursTask.class);
 
 
-    // TODO
     @Scheduled(cron = "0/10 * * * * ? ")
     public void renewWorkTime(){
         logger.debug("开始更新工作时间------");

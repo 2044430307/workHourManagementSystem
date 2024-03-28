@@ -1,0 +1,2 @@
+1、修改server模块中resources包下application.yml文件中的mysql账户名和密码
+2、修改thingsboard服务器ip地址，租户管理员用户名和密码
