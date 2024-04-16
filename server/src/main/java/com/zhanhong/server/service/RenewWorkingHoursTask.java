@@ -38,7 +38,8 @@ public class RenewWorkingHoursTask {
         TbJWT tbJWT = workTimeService.getToken(properties.getUsername(), properties.getPassword());
         String token="Bearer \n"+tbJWT.getToken();
         List<String> deviceIds = workTimeService.getDeviceIds(token);
-        LocalDateTime now = LocalDateTime.of(2024,3,25,16,19,7);
+        //LocalDateTime now = LocalDateTime.of(2024,3,25,16,19,7);
+        LocalDateTime now=LocalDateTime.now();
         long timestamp = TimestampUtil.toTimestamp(now);
         for (String deviceId:deviceIds) {
             TbData data = workTimeService.getData(timestamp, timestamp + 1l, token, deviceId);
